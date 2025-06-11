@@ -1,0 +1,14 @@
+Session saved on Turn 13 for Player arslan
+Final score for Player ars: 1030 after 1 turns
+Final score for Player dah: 1000 after 1 turns
+Player ars lost due to zero population on turn 13
+Player dah won on turn 14
+Final score for Player ars: 0 after 14 turns
+Final score for Player dah: 1060 after 14 turns
+Player dfzd lost due to zero population on turn 3
+Session saved on Turn 3 for Player czc
+Player czc won on turn 4
+Final score for Player dfzd: 0 after 4 turns
+Final score for Player czc: 1030 after 4 turns
+Final score for Player saas: 1030 after 3 turns
+Final score for Player asd: 1030 after 3 turns

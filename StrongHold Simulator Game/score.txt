@@ -1,0 +1,19 @@
+Session Ended with Population 104
+Session saved on Turn 9 with Population 127
+Final score: 1270 after 9 turns
+Session saved on Turn 4 with Population 93
+Final score: 930 after 4 turns
+Final score: 1000 after 1 turns
+Session saved on Turn 8 with Population 114
+Final score: 1140 after 8 turns
+Session saved on Turn 10 with Population 71
+Final score: 670 after 11 turns
+Session saved on Turn 13 with Population 114
+Final score: 1140 after 13 turns
+Session saved on Turn 5 with Population 75
+Final score: 750 after 5 turns
+Final score: 1000 after 5 turns
+Final score: 1080 after 5 turns
+Final score: 20 after 27 turns
+Final score: 1170 after 5 turns
+Final score: 1000 after 2 turns
