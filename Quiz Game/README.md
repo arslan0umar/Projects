@@ -1,6 +1,6 @@
 # Quiz Master OOP Edition 🧠🎮
 
-![Quiz Master](https://img.shields.io/badge/Quiz_Master-OOP_C%2B%2B-blue.svg)
+![Quiz Master](https://img.shields.io/badge/Quiz_Master_C%2B%2B-blue.svg)
 
 ## Link
 
@@ -120,7 +120,7 @@ Project Description.docx    # Design and documentation
 | Input         | Action                          |
 | ------------- | ------------------------------- |
 | 1 / 2         | Select game mode (1P or 2P)     |
-| A/B/C/D       | Answer question (MCQs)          |
+| 1/2/3/4       | Answer question (MCQs)          |
 | ENTER         | Proceed to next question/menu   |
 | ESC           | Exit the game                   |
 
