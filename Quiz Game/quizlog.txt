@@ -1,0 +1,4 @@
+Name: Ars	 Score: 30
+Date and Time: Fri Jul 18 00:11:03 2025
+Correct Answer: 4  |  Wrong Answer: 4  |  Unattempted Answer: 2
+
