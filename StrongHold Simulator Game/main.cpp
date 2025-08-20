@@ -624,7 +624,9 @@ int main() {
                 cout << "Error: " << e.message << "\n";
             }
         }
-        if (activePlayers <= 1) {
+        // Check for game over conditions
+        if (numPlayers > 1 && activePlayers <= 1) {
+            // Only end game due to victory/defeat in multiplayer mode
             running = false;
             if (activePlayers == 1) {
                 for (int i = 0; i < numPlayers; i++) {
@@ -640,6 +642,12 @@ int main() {
                 displayTitleBox("GAME OVER");
                 cout << "All kingdoms have collapsed! No victor.\n";
             }
+        }
+        else if (numPlayers == 1 && activePlayers == 0) {
+            // In single player mode, only end if the player is defeated
+            running = false;
+            displayTitleBox("GAME OVER");
+            cout << "Your kingdom has collapsed!\n";
         }
         if (running) {
             turn++;
