@@ -1,109 +1,179 @@
-# 🏰 Stronghold: Medieval Kingdom Simulator
+# StrongHold Simulator Game 🏰⚔️
 
-## 📖 Overview
+![StrongHold](https://img.shields.io/badge/StrongHold_C%2B%2B-red.svg)
 
-**Stronghold** is a text-based medieval kingdom management simulation game where you take on the role of a ruler managing all aspects of your medieval stronghold. Make strategic decisions to ensure the prosperity and survival of your realm through:
+## Link
 
-- Resource management  
-- Military training  
-- Economic policies  
-- Leadership actions
+[📺 Watch Gameplay Demo (Google Drive)](https://drive.google.com/file/d/1Phb31om_TIofXLV91pWrW_ad3MDJoD-9/view?usp=drive_link) <!-- Replace with actual link -->
 
----
+## Table of Contents
 
-## 🌟 Features
-
-- **🧱 Resource Management**: Gather, consume, and trade resources including:
-  - Food
-  - Wood
-  - Stone
-  - Iron
-  - Gold
-- **👥 Population System**: Monitor and manage your kingdom's population with natural growth and emigration.
-- **⚖️ Social Class Dynamics**: Balance the needs of:
-  - Peasants (affected by food and taxes)
-  - Merchants (trade and economy)
-  - Nobles (political power and stability)
-- **🛡️ Military Management**: Train and pay your army to maintain strength and morale.
-- **💰 Economic System**: Set and collect taxes, invest in infrastructure and growth.
-- **🏦 Banking System**: Take loans with interest and manage your finances.
-- **👑 Leadership Actions**: Inspire your population, hold elections, change policies—or attempt a coup!
-- **🎲 Random Events**: Deal with famines, wars, plagues—or enjoy prosperous harvests and trade booms.
-- **💾 Save/Load System**: Save your kingdom’s progress and resume later.
+* [Description](#description)
+* [Features](#features)
+* [Installation](#installation)
+* [File Structure](#file-structure)
+* [Controls](#controls)
+* [Game Mechanics](#game-mechanics)
+* [Persistence](#persistence)
+* [Development](#development)
 
 ---
 
-## 🎮 How to Play
+## Description
 
-1. Compile the game using a C++ compiler.
-2. Run the generated executable.
-3. Navigate through the console menus to manage your kingdom.
-4. Balance:
-   - Resources
-   - Population happiness
-   - Military strength
-5. Survive as many turns as possible while expanding your kingdom.
+**StrongHold Simulator Game** is a C++ console-based turn-based strategy game where players build kingdoms, manage resources, lead armies, and engage in diplomacy or warfare. The game combines economy, military tactics, and leadership elements, providing a rich simulation of medieval strategy.
 
----
-
-## ⚙️ Game Systems
-
-### 📦 Resource Management
-
-The game features five essential resources:
-
-- **Food**: Required for population and army training.
-- **Wood**: Used for construction.
-- **Stone**: Premium building material.
-- **Iron**: Essential for military equipment.
-- **Gold**: Currency for most operations.
-
-### 🏘️ Social Classes
-
-Your society includes:
-
-- **Peasants** – affected by food and taxation.
-- **Merchants** – driven by trade and policy.
-- **Nobles** – concerned with political stability.
-
-### 🧠 Game Mechanics
-
-- Each turn represents a period in your reign.
-- Random events test your decision-making.
-- Social satisfaction affects emigration.
-- Tax policy impacts each class differently.
-- Poor planning can lead to rebellion or collapse.
+✨ Highlights:
+* Multi-player turn-based gameplay
+* Kingdom management (economy, army, diplomacy)
+* War simulation with morale and popularity effects
+* Dynamic map, events, and trade system
+* Save and load functionality
 
 ---
 
-## 🛠️ Technical Details
 
-- Language: **C++**
-- Interface: **Console-based**
-- Design: **Object-Oriented (OOP)** with class inheritance
-- Save/Load: Implemented using **file I/O**
+
+## Features
+
+### Core Systems
+
+- **Army Management**: Train and maintain soldiers.
+- **Economy**: Manage resources, taxes, and trade.
+- **Diplomacy**: Form alliances, trade agreements, or declare wars.
+- **Events**: Random events influence gameplay.
+
+### Victory Conditions
+
+- Eliminate other kingdoms through war or diplomacy.
+- Maintain stability and growth of your kingdom.
+
+### War Outcome System
+
+* War results directly affect morale, leader popularity, and satisfaction.
+* Victorious kingdoms gain reputation, while defeated kingdoms lose morale.
+
+### Kingdom Elimination
+
+* If a kingdom's population reaches zero, it is eliminated and removed from the map.
+* Victory is declared when only one kingdom remains.
+
+### Dynamic Market & Trade
+
+* Market transactions recorded in `market_log.txt`.
+* Prices and resources dynamically updated.
+
+### Population & Events 🏰  
+The game introduces a dynamic population system with **random events** that can positively or negatively impact the kingdom. Citizens are born over time, contributing to natural **population growth**, while **migration** brings in new people seeking better opportunities. At the same time, players must manage challenges like **deaths** caused by old age, disease, starvation, or unexpected events. These mechanics create a realistic cycle of growth and decline, making strategic resource management and decision-making essential for survival.
 
 ---
 
-## 🧠 Tips for Rulers
+## Installation
 
-- Keep the population well-fed to avoid emigration.
-- Set taxes wisely: high taxes = more gold, but lower satisfaction.
-- Invest during economic highs.
-- Maintain a strong, loyal army.
-- Monitor class satisfaction regularly to avoid unrest.
+1. Clone or download the repository:
+
+```bash
+git clone https://github.com/yourusername/StrongHold-Simulator.git
+```
+
+2. Make sure the following files are in the same directory:
+   - `map.txt`
+   - `market.txt`
+   - `game_save.txt`
+
+3. Compile the program using g++:
+
+```bash
+g++ main.cpp Army.cpp Bank.cpp Communication.cpp Conflict.cpp Diplomacy.cpp Economy.cpp EventManager.cpp Leader.cpp Logger.cpp Map.cpp Market.cpp Merchant.cpp Noble.cpp Religion.cpp Kingdom.cpp -o stronghold
+```
+
+4. Run the game:
+
+```bash
+./stronghold
+```
+
+> 📦 No external libraries needed. Only standard C++ headers are used.
 
 ---
 
-## 🔮 Future Development Plans
+## File Structure
 
-- Graphical User Interface (GUI)
-- Diplomacy with neighboring kingdoms
-- Advanced building and technology trees
-- New random events and story arcs
-- Multiplayer support
+```
+main.cpp                    # Main game driver
+Army.cpp                    # Army management system
+Bank.cpp                    # Economy & finance
+Communication.cpp           # Messaging system
+Conflict.cpp                # War simulation mechanics
+Diplomacy.cpp               # Diplomacy between kingdoms
+Economy.cpp                 # Resource and trade system
+EventManager.cpp            # Random events
+Leader.cpp                  # Leader stats and popularity
+Logger.cpp                  # Logging system
+Map.cpp                     # Map rendering & management
+Market.cpp                  # Market system
+Merchant.cpp                # Merchant operations
+Noble.cpp                   # Noble class and hierarchy
+Religion.cpp                # Religion system
+Kingdom.cpp                 # Core Kingdom class
+map.txt                     # Base map file
+map_save.txt                # Saved map state
+market.txt                  # Market configuration
+market_log.txt              # Market transactions
+messages.txt                # In-game communication logs
+game_save.txt               # Save file
+Project Description.docx    # Design and documentation
+```
 
 ---
 
-> "A ruler should be slow to punish and swift to reward." – *Ovid*
+## Controls
 
+| Input             | Action                                |
+| ----------------- | ------------------------------------- |
+| 1 / 2 /...        | Select actions (Attack, Trade, etc.)  |
+| ENTER             | Proceed to next turn/menu             |
+| ESC               | Exit the game                         |
+
+---
+
+## Game Mechanics
+
+### Turn-Based Gameplay
+
+- Two players take turns managing their kingdoms.
+- Each turn allows military, economic, or diplomatic actions.
+
+### War System
+
+- Victory boosts morale, popularity, and satisfaction.
+- Defeat lowers soldier morale and leader reputation.
+
+### Scoring / Victory
+
+- Survival until the end determines the winner.
+- Kingdoms with zero population are removed.
+
+---
+
+## Persistence
+
+Saved to files:
+
+- `game_save.txt`: Stores overall game progress
+- `map_save.txt`: Saves the map state
+- `market_log.txt`: Records trade history
+- `highscores.txt` (optional): Can track victories
+
+---
+
+## Development
+
+### Built With:
+
+* C++ (Standard Libraries)
+* Modular OOP structure with multiple classes
+
+---
+
+🛠️ **This project is open to collaboration. Fork it, improve mechanics, add AI opponents, or expand kingdom features. Contributions are welcome!** 🚀
